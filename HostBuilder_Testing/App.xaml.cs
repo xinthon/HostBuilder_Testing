@@ -28,6 +28,7 @@ namespace HostBuilder_Testing
             return Host.CreateDefaultBuilder(args)
                 .AddDbContext()
                 .AddServices()
+                .AddStores()
                 .AddViewModels()
                 .AddViews();
         }

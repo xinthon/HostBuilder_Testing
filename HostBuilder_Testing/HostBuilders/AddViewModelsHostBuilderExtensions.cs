@@ -1,4 +1,6 @@
-﻿using HostBuilder_Testing.ViewModels;
+﻿using HostBuilder_Testing.State.Navigators;
+using HostBuilder_Testing.ViewModels;
+using HostBuilder_Testing.ViewModels.Factories;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using System;
@@ -15,7 +17,16 @@ namespace HostBuilder_Testing.HostBuilders
         {
             host.ConfigureServices(services =>
             {
+                services.AddTransient<HomeViewModel>();
+                services.AddTransient<SettingViewModel>();
                 services.AddTransient<MainViewModel>();
+
+                services.AddSingleton<CreateViewModel<HomeViewModel>>(services => () => services.GetRequiredService<HomeViewModel>());
+
+                services.AddSingleton<ISimpleTraderViewModelFactory, SimpleTraderViewModelFactory>();
+
+                services.AddSingleton<ViewModelDelegateRenavigator<HomeViewModel>>();
+                services.AddSingleton<ViewModelDelegateRenavigator<SettingViewModel>>();
             });
 
             return host;
