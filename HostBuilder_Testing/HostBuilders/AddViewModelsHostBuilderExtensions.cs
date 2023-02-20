@@ -22,8 +22,9 @@ namespace HostBuilder_Testing.HostBuilders
                 services.AddTransient<MainViewModel>();
 
                 services.AddSingleton<CreateViewModel<HomeViewModel>>(services => () => services.GetRequiredService<HomeViewModel>());
+                services.AddSingleton<CreateViewModel<SettingViewModel>>(services => () => services.GetRequiredService<SettingViewModel>());
 
-                services.AddSingleton<ISimpleTraderViewModelFactory, SimpleTraderViewModelFactory>();
+                services.AddSingleton<IViewModelFactory, ViewModelFactory>();
 
                 services.AddSingleton<ViewModelDelegateRenavigator<HomeViewModel>>();
                 services.AddSingleton<ViewModelDelegateRenavigator<SettingViewModel>>();

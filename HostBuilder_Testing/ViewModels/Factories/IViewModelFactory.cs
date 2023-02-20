@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace HostBuilder_Testing.ViewModels.Factories
 {
-    public interface ISimpleTraderViewModelFactory
+    public interface IViewModelFactory
     {
         ViewModelBase CreateViewModel(ViewType viewType);
     }

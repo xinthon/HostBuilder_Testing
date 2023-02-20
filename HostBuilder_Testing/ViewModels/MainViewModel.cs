@@ -23,7 +23,7 @@ namespace HostBuilder_Testing.ViewModels
         /// </summary>
         private readonly IUserService _userService;
         private readonly INavigator _navigator;
-        private readonly ISimpleTraderViewModelFactory _viewModelFactory;
+        private readonly IViewModelFactory _viewModelFactory;
 
 
         /// <summary>
@@ -38,7 +38,7 @@ namespace HostBuilder_Testing.ViewModels
         /// </summary>
         /// <param name="userService"></param>
         /// <param name="navigator"></param>
-        public MainViewModel(IUserService userService, ISimpleTraderViewModelFactory viewModelFactory, INavigator navigator)
+        public MainViewModel(IUserService userService, IViewModelFactory viewModelFactory, INavigator navigator)
         {
             _userService = userService;
             _navigator = navigator;

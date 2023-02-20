@@ -8,9 +8,12 @@
     d:DesignHeight="450"
     d:DesignWidth="800"
     mc:Ignorable="d">
-    <Grid Background="Red">
-        <TextBlock>
-            Testing Applixation
-        </TextBlock>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+
+        <Button Content="Click me" />
     </Grid>
 </UserControl>

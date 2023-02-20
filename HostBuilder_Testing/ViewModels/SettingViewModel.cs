@@ -6,11 +6,22 @@ using System.Threading.Tasks;
 
 namespace HostBuilder_Testing.ViewModels
 {
-    public class SettingModel : ViewModelBase
+    public class SettingViewModel : ViewModelBase
     {
-        public SettingModel()
+        private string title { get; set; } = string.Empty;
+        public string Title
         {
+            get=> title;
+            set
+            {
+                title = value;
+                OnPropertyChanged("Title");
+            }
+        }
 
+        public SettingViewModel()
+        {
+            this.Title = "Home";
         }
     }
 }

@@ -7,15 +7,18 @@ using System.Threading.Tasks;
 
 namespace HostBuilder_Testing.ViewModels.Factories
 {
-    public class SimpleTraderViewModelFactory : ISimpleTraderViewModelFactory
+    public class ViewModelFactory : IViewModelFactory
     {
         private readonly CreateViewModel<HomeViewModel> _createHomeViewModel;
+        private readonly CreateViewModel<SettingViewModel> _createSettingViewModel;
 
-        public SimpleTraderViewModelFactory(
-            CreateViewModel<HomeViewModel> createHomeViewModel
+        public ViewModelFactory(
+            CreateViewModel<HomeViewModel> createHomeViewModel,
+            CreateViewModel<SettingViewModel> createSettingViewMode
             )
         {
             _createHomeViewModel = createHomeViewModel;
+            _createSettingViewModel = createSettingViewMode;
         }
 
         public ViewModelBase CreateViewModel(ViewType viewType)
@@ -24,6 +27,8 @@ namespace HostBuilder_Testing.ViewModels.Factories
             {
                 case ViewType.Home:
                     return _createHomeViewModel();
+                case ViewType.Setting: 
+                    return _createSettingViewModel();
                 default:
                     throw new ArgumentException("The ViewType does not have a ViewModel.", "viewType");
             }

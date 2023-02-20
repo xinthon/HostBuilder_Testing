@@ -6,21 +6,29 @@
     xmlns:local="clr-namespace:HostBuilder_Testing.Controls"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
-    <Grid Background="blue">
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition />
-            <ColumnDefinition Width="120" />
-        </Grid.ColumnDefinitions>
+    <Grid>
+        <Border Margin="0,20" Background="Black">
+            <Border.Effect>
+                <DropShadowEffect
+                    BlurRadius="50"
+                    Direction="200"
+                    Opacity="0.2"
+                    ShadowDepth="30"
+                    Color="Black" />
+            </Border.Effect>
+        </Border>
+        <Grid Background="White">
+            <Grid.RowDefinitions>
+                <RowDefinition />
+            </Grid.RowDefinitions>
 
-        <StackPanel Grid.Column="0">
-            <TextBlock>
-                Testing Applixation
-            </TextBlock>
-        </StackPanel>
-        <StackPanel Grid.Column="1">
-            <TextBlock>
-                <Button />
-            </TextBlock>
-        </StackPanel>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition Width="120" />
+            </Grid.ColumnDefinitions>
+            <StackPanel Grid.Column="0" />
+            <StackPanel Grid.Column="1" />
+        </Grid>
+
     </Grid>
 </UserControl>

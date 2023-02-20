@@ -13,13 +13,13 @@
     mc:Ignorable="d">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="60" />
+            <RowDefinition Height="55" />
             <RowDefinition />
         </Grid.RowDefinitions>
 
 
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="250" />
+            <ColumnDefinition Width="230" />
             <ColumnDefinition />
         </Grid.ColumnDefinitions>
 
@@ -29,11 +29,18 @@
         <Grid
             Grid.Row="1"
             Grid.Column="1"
-            Margin="10"
+            Margin="20"
             Background="white">
-            <!--<TextBlock Text="{Binding Path=CurrentViewModel, Mode=Default}" />-->
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+
+            <controls:PageHeader />
 
             <ScrollViewer
+                Grid.Row="1"
                 Grid.Column="1"
                 HorizontalScrollBarVisibility="Disabled"
                 VerticalScrollBarVisibility="Auto">

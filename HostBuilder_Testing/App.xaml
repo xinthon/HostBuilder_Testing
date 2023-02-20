@@ -7,8 +7,18 @@
     xmlns:vm="clr-namespace:HostBuilder_Testing.ViewModels">
     <Application.Resources>
         <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Styles/_Colors.xaml" />
+                <ResourceDictionary Source="/Styles/_Common.xaml" />
+                <ResourceDictionary Source="/Styles/NavigationBar/_Button.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+
             <DataTemplate DataType="{x:Type vm:HomeViewModel}">
                 <views:HomeView />
+            </DataTemplate>
+
+            <DataTemplate DataType="{x:Type vm:SettingViewModel}">
+                <views:SettingView />
             </DataTemplate>
         </ResourceDictionary>
     </Application.Resources>

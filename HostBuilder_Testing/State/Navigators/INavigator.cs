@@ -10,6 +10,7 @@ namespace HostBuilder_Testing.State.Navigators
     public enum ViewType
     {
         Home,
+        Setting
     }
 
     public interface INavigator
