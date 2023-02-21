@@ -8,19 +8,13 @@ namespace HostBuilder_Testing.ViewModels
 {
     public class HomeViewModel : ViewModelBase
     {
-        private string title { get; set; } = string.Empty;
-        public string Title
-        {
-            get => title;
-            set
-            {
-                title = value;
-                OnPropertyChanged("Title");
-            }
-        }
+        
         public HomeViewModel()
         {
-            this.Title = "Home";
+            Task.Run(() =>
+            {
+                this.Title = "Home";
+            });
         }
     }
 }

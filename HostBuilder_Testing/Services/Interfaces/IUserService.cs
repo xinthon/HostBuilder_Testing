@@ -9,5 +9,8 @@ namespace HostBuilder_Testing.Services.Interfaces
     {
         Task<IEnumerable<User>> Users();
         Task<User> GetByUserId(Guid id);
+        Task<bool> Create(User user);
+
+        bool HasUser(Guid id);
     }
 }

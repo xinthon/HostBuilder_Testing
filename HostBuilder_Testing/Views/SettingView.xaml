@@ -13,8 +13,5 @@
             <RowDefinition Height="35" />
             <RowDefinition />
         </Grid.RowDefinitions>
-        <TextBlock>
-            This is setting page
-        </TextBlock>
     </Grid>
 </UserControl>

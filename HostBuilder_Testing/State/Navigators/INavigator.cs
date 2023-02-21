@@ -7,15 +7,11 @@ using System.Threading.Tasks;
 
 namespace HostBuilder_Testing.State.Navigators
 {
-    public enum ViewType
-    {
-        Home,
-        Setting
-    }
+
 
     public interface INavigator
     {
         ViewModelBase CurrentViewModel { get; set; }
-        event Action StateChanged;
+        event Action<ViewModelBase> StateChanged;
     }
 }

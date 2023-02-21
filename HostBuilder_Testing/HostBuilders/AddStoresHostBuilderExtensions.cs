@@ -10,7 +10,7 @@ namespace HostBuilder_Testing.HostBuilders
         {
             host.ConfigureServices(services =>
             {
-                services.AddSingleton<INavigator, Navigator>();
+                services.AddScoped<INavigator, Navigator>();
             });
 
             return host;

@@ -21,10 +21,10 @@ namespace HostBuilder_Testing.State.Navigators
                 _currentViewModel?.Dispose();
 
                 _currentViewModel = value;
-                StateChanged?.Invoke();
+                StateChanged?.Invoke(value);
             }
         }
 
-        public event Action StateChanged;
+        public event Action<ViewModelBase> StateChanged;
     }
 }

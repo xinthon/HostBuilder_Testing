@@ -13,7 +13,8 @@
             <RowDefinition Height="Auto" />
             <RowDefinition />
         </Grid.RowDefinitions>
+        <Grid>
 
-        <Button Content="Click me" />
+        </Grid>
     </Grid>
 </UserControl>

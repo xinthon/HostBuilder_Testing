@@ -17,16 +17,26 @@ namespace HostBuilder_Testing.HostBuilders
         {
             host.ConfigureServices(services =>
             {
+                /// home
                 services.AddTransient<HomeViewModel>();
+                /// manage user
+                services.AddTransient<ManagerUserViewModel>();
+                services.AddTransient<CreateUserViewModel>();
+                /// setting
                 services.AddTransient<SettingViewModel>();
-                services.AddTransient<MainViewModel>();
+                /// main 
+                services.AddSingleton<MainViewModel>();
 
                 services.AddSingleton<CreateViewModel<HomeViewModel>>(services => () => services.GetRequiredService<HomeViewModel>());
+                services.AddSingleton<CreateViewModel<ManagerUserViewModel>>(services => () => services.GetRequiredService<ManagerUserViewModel>());
+                services.AddSingleton<CreateViewModel<CreateUserViewModel>>(services => () => services.GetRequiredService<CreateUserViewModel>());
                 services.AddSingleton<CreateViewModel<SettingViewModel>>(services => () => services.GetRequiredService<SettingViewModel>());
 
                 services.AddSingleton<IViewModelFactory, ViewModelFactory>();
 
                 services.AddSingleton<ViewModelDelegateRenavigator<HomeViewModel>>();
+                services.AddSingleton<ViewModelDelegateRenavigator<CreateUserViewModel>>();
+                services.AddSingleton<ViewModelDelegateRenavigator<ManagerUserViewModel>>();
                 services.AddSingleton<ViewModelDelegateRenavigator<SettingViewModel>>();
             });
 

@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
+using HostBuilder_Testing.Helpers;
 
 namespace HostBuilder_Testing.Commands
 {
@@ -35,6 +36,7 @@ namespace HostBuilder_Testing.Commands
 
                 _navigator.CurrentViewModel = _viewModelFactory.CreateViewModel(viewType);
             }
+
         }
     }
 }

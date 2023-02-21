@@ -17,6 +17,14 @@
                 <views:HomeView />
             </DataTemplate>
 
+            <DataTemplate DataType="{x:Type vm:ManagerUserViewModel}">
+                <views:ManagerUserView />
+            </DataTemplate>
+
+            <DataTemplate DataType="{x:Type vm:CreateUserViewModel}">
+                <views:CreateUserView />
+            </DataTemplate>
+
             <DataTemplate DataType="{x:Type vm:SettingViewModel}">
                 <views:SettingView />
             </DataTemplate>

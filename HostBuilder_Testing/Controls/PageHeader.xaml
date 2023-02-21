@@ -12,6 +12,6 @@
         <TextBlock
             HorizontalAlignment="Left"
             FontSize="24"
-            Text="{Binding Path=CurrentViewModel}" />
+            Text="{Binding Path=CurrentViewModel.Title}" />
     </Grid>
 </UserControl>
